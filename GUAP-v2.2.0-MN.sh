@@ -1,5 +1,5 @@
 #!/bin/bash
-# GuapCoin Masternode Setup Script V2 for Ubuntu 18.04 LTS
+# GuapCoin Masternode Setup Script V2.2.0 for Ubuntu LTS
 #
 # Script will attempt to autodetect primary public IP address
 # and generate masternode private key unless specified in command line
@@ -42,21 +42,12 @@ function stop_daemon {
         fi
     fi
 }
-#Function detect_ubuntu
-
- if [[ $(lsb_release -d) == *18.04* ]]; then
-   UBUNTU_VERSION=18
-else
-   echo -e "${RED}You are not running Ubuntu 18.04, Installation is cancelled.${NC}"
-   exit 1
-
-fi
 
 #Process command line parameters
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER v2.0.0--------+
+echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER v2.2 .0--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -113,42 +104,6 @@ sudo apt-get -y install wget nano
 sudo apt-get install unzip
 fi
 
-#Network Settings
-echo -e "${GREEN}Installing Network Settings...${NC}"
-{
-sudo apt-get install ufw -y
-} &> /dev/null
-echo -ne '[##                 ]  (10%)\r'
-{
-sudo apt-get update -y
-} &> /dev/null
-echo -ne '[######             ] (30%)\r'
-{
-sudo ufw default deny incoming
-} &> /dev/null
-echo -ne '[#########          ] (50%)\r'
-{
-sudo ufw default allow outgoing
-sudo ufw allow ssh
-} &> /dev/null
-echo -ne '[###########        ] (60%)\r'
-{
-sudo ufw allow $PORT/tcp
-sudo ufw allow $RPC/tcp
-} &> /dev/null
-echo -ne '[###############    ] (80%)\r'
-{
-sudo ufw allow 22/tcp
-sudo ufw limit 22/tcp
-} &> /dev/null
-echo -ne '[#################  ] (90%)\r'
-{
-echo -e "${YELLOW}"
-sudo ufw --force enable
-echo -e "${NC}"
-} &> /dev/null
-echo -ne '[###################] (100%)\n'
-
 #Generating Random Password for  JSON RPC
 rpcuser=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 rpcpassword=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
@@ -175,8 +130,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/guapcoin*
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.0/Guapcoin-2.0-Daemon-Ubuntu_18.04.tar.gz
-tar -xzvf Guapcoin-2.0-Daemon-Ubuntu_18.04.tar.gz
+wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.2.0/Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
+tar -xzvf Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
 sudo chmod -R 755 guapcoin-cli
 sudo chmod -R 755 guapcoind
 cp -p -r guapcoind /usr/local/bin
@@ -219,8 +174,10 @@ done
     guapcoin-cli stop
     sleep 5
 cd ~/.guapcoin/ && rm -rf blocks chainstate sporks
-cd ~/.guapcoin/ && wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.0/bootstrap.zip
-cd ~/.guapcoin/ && unzip bootstrap.zip	
+cd ~/.guapcoin/ && wget http://45.63.25.141/bootstrap.tar.gz
+cd ~/.guapcoin/ && tar -xzvf bootstrap.tar.gz
+sudo rm -rf ~/.guapcoin/bootstrap.tar.gz
+	
 # Create guapcoin.conf
 cat <<EOF > ~/.guapcoin/guapcoin.conf
 rpcuser=$rpcuser

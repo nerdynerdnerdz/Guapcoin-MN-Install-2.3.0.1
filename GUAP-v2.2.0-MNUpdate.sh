@@ -2,12 +2,14 @@
 
 echo "Your GuapCoin Masternode Will be Updated To Latest Version Now" 
 sudo apt-get -y install unzip
+guapcoin-cli stop
 systemctl stop guapcoin.service
+sleep 10
 rm -rf /usr/local/bin/guapcoin*
-mkdir GUAP_2.0
-cd GUAP_2.0
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.0/Guapcoin-2.0-Daemon-Ubuntu_16.04.tar.gz
-tar xzvf Guapcoin-2.0-Daemon-Ubuntu_16.04.tar.gz
+mkdir GUAP_2.2.0
+cd GUAP_2.2.0
+wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.2.0/Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
+tar -xzvf Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
 mv guapcoind /usr/local/bin/guapcoind
 mv guapcoin-cli /usr/local/bin/guapcoin-cli
 chmod +x /usr/local/bin/guapcoin*
@@ -16,11 +18,11 @@ rm -rf ~/.guapcoin/chainstate
 rm -rf ~/.guapcoin/sporks
 rm -rf ~/.guapcoin/peers.dat
 cd ~/.guapcoin/
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.0/bootstrap.zip
-unzip bootstrap.zip
+wget http://45.63.25.141/bootstrap.tar.gz
+tar -xzvf bootstrap.tar.gz
 
 cd ..
-rm -rf ~/.guapcoin/bootstrap.zip ~/GUAP_2.0
+rm -rf ~/.guapcoin/bootstrap.tar.gz ~/GUAP_2.2.0
 systemctl start guapcoin.service
 sleep 10
 guapcoin-cli addnode 159.65.221.180 onetry
