@@ -1,11 +1,11 @@
 #!/bin/bash
-# GuapCoin Masternode Setup Script V2.2.0 for Ubuntu LTS
+# GuapCoin Masternode Setup Script V2.3.0 for Ubuntu LTS
 #
 # Script will attempt to autodetect primary public IP address
 # and generate masternode private key unless specified in command line
 #
 # Usage:
-# bash guapcoin.autoinstall.sh
+# bash guapcoinauto.sh
 #
 
 #Color codes
@@ -47,7 +47,7 @@ function stop_daemon {
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER v2.2 .0--------+
+echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER v2.3.0--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -130,8 +130,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/guapcoin*
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.2.0/Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
-tar -xzvf Guapcoin-2.2.0-Daemon-Ubuntu.tar.gz
+wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.0/Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
+tar -xzvf Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
 sudo chmod -R 755 guapcoin-cli
 sudo chmod -R 755 guapcoind
 cp -p -r guapcoind /usr/local/bin
@@ -191,9 +191,9 @@ daemon=1
 logtimestamps=1
 maxconnections=256
 masternode=1
-externalip=$publicip
-bind=$publicip
-masternodeaddr=$publicip
+externalip=$publicip:$PORT
+bind=$publicip:$PORT
+masternodeaddr=$publicip:$PORT
 masternodeprivkey=$genkey
 addnode=159.65.221.180
 addnode=45.76.61.148
@@ -210,7 +210,7 @@ EOF
     guapcoind -daemon
 #Finally, starting daemon with new guapcoin.conf
 printf '#!/bin/bash\nif [ ! -f "~/.guapcoin/guapcoin.pid" ]; then /usr/local/bin/guapcoind -daemon ; fi' > /root/guapcoinauto.sh
-chmod -R 755 guapcoinauto.sh
+chmod -R 755 /root/guapcoinauto.sh
 #Setting auto start cron job for guapcoin
 if ! crontab -l | grep "guapcoinauto.sh"; then
     (crontab -l ; echo "*/5 * * * * /root/guapcoinauto.sh")| crontab -
