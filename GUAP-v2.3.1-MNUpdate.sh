@@ -6,10 +6,10 @@ guapcoin-cli stop
 systemctl stop guapcoin.service
 sleep 10
 rm -rf /usr/local/bin/guapcoin*
-mkdir GUAP_2.3.0
-cd GUAP_2.3.0
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.0/Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
-tar -xzvf Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
+mkdir GUAP_2.3.1
+cd GUAP_2.3.1
+wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.1/Guapcoin-2.3.1-Daemon-Ubuntu.tar.gz
+tar -xzvf Guapcoin-2.3.1-Daemon-Ubuntu.tar.gz
 mv guapcoind /usr/local/bin/guapcoind
 mv guapcoin-cli /usr/local/bin/guapcoin-cli
 chmod +x /usr/local/bin/guapcoin*
@@ -22,7 +22,7 @@ wget http://45.63.25.141/bootstrap.tar.gz
 tar -xzvf bootstrap.tar.gz
 
 cd ..
-rm -rf ~/.guapcoin/bootstrap.tar.gz ~/GUAP_2.3.0
+rm -rf ~/.guapcoin/bootstrap.tar.gz ~/GUAP_2.3.1
 systemctl start guapcoin.service
 sleep 10
 guapcoin-cli addnode 159.65.221.180 onetry

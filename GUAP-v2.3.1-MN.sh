@@ -1,5 +1,5 @@
 #!/bin/bash
-# GuapCoin Masternode Setup Script V2.3.0 for Ubuntu LTS
+# GuapCoin Masternode Setup Script V2.3.1 for Ubuntu LTS
 #
 # Script will attempt to autodetect primary public IP address
 # and generate masternode private key unless specified in command line
@@ -47,7 +47,7 @@ function stop_daemon {
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER v2.3.0--------+
+echo -e "${GREEN} ------- GuapCoin MASTERNODE INSTALLER V2.3.1--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -130,8 +130,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/guapcoin*
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.0/Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
-tar -xzvf Guapcoin-2.3.0-Daemon-Ubuntu.tar.gz
+wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.1/Guapcoin-2.3.1-Daemon-Ubuntu.tar.gz
+tar -xzvf Guapcoin-2.3.1-Daemon-Ubuntu.tar.gz
 sudo chmod -R 755 guapcoin-cli
 sudo chmod -R 755 guapcoind
 cp -p -r guapcoind /usr/local/bin

@@ -1,11 +1,11 @@
-# Guide for GuapCoin v2.3.0 MN Setup:
+# Guide for GuapCoin v2.3.1 MN Setup:
 
 
 For **Ubuntu**
 ```
-wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.0-MN.sh
-sudo chmod +x GUAP-v2.3.0-MN.sh
-./GUAP-v2.3.0-MN.sh
+wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.1-MN.sh
+sudo chmod +x GUAP-v2.3.1-MN.sh
+./GUAP-v2.3.1-MN.sh
 ```
 ***
 
@@ -37,12 +37,12 @@ When Node is Fully Synced enter the command below to check the masternode status
 You will get Masternode Successfully Started
 
 
-# Guide for GuapCoin v2.3.0 MN Update:
+# Guide for GuapCoin v2.3.1 MN Update:
 
 For **Ubuntu**
 ```
-wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.0-MNUpdate.sh
-sudo chmod +x GUAP-v2.3.0-MNUpdate.sh
-./GUAP-v2.3.0-MNUpdate.sh
+wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.1-MNUpdate.sh
+sudo chmod +x GUAP-v2.3.1-MNUpdate.sh
+./GUAP-v2.3.1-MNUpdate.sh
 ```
 ***
