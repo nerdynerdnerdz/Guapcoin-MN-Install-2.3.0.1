@@ -130,7 +130,7 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/guapcoin*
-wget https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-2.3.0.1/blob/master/Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
+wget https://github.com/guapcrypto/Guapcoin-MN-Install-2.3.0.1/raw/master/Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
 tar -xzvf Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
 sudo chmod -R 755 guapcoin-cli
 sudo chmod -R 755 guapcoind
