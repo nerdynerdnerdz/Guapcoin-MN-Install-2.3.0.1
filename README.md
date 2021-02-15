@@ -3,9 +3,9 @@
 
 For **Ubuntu**
 ```
-wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.1-MN.sh
-sudo chmod +x GUAP-v2.3.1-MN.sh
-./GUAP-v2.3.1-MN.sh
+wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.0.1-MN.sh
+sudo chmod +x GUAP-v2.3.0.1-MN.sh
+./GUAP-v2.3.0.1-MN.sh
 ```
 ***
 
@@ -41,8 +41,8 @@ You will get Masternode Successfully Started
 
 For **Ubuntu**
 ```
-wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.1-MNUpdate.sh
-sudo chmod +x GUAP-v2.3.1-MNUpdate.sh
-./GUAP-v2.3.1-MNUpdate.sh
+wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-V2/master/GUAP-v2.3.0.1-MNUpdate.sh
+sudo chmod +x GUAP-v2.3.0.1-MNUpdate.sh
+./GUAP-v2.3.0.1-MNUpdate.sh
 ```
 ***
