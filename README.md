@@ -1,10 +1,11 @@
-# Table Of Content:
-## Section 1. Description 
+# Table Of Contents:
+## Section 1. Description
 ## Section 2. Quick Install Guide for GuapCoin v2.3.0.1 MasterNode Setup
-## Section 3. Guide for GuapCoin v2.3.0.1 MasterNode Update
+## Section 3. Guide for installing GuapCoin v2.3.0.1 MasterNode Update
 ## Section 4. How to Setup A MasterNode Guide - Full Tutorial
+## Section 5. Fixes
 
-# Section 1. Introduction 
+# Section 1. Description 
 
 For those that are interested please see below instructions for setting up a MN on your desktop wallet using your existing GUAP. Setting up a masternode requires creating a masternode wallet on a virtual private server and setting up a masternode controller on your desktop wallet.
 
@@ -65,6 +66,7 @@ You will get Masternode Successfully Started
 
 
 # Section 3. Guide for GuapCoin v2.3.0.1 MasterNode Update:
+The instructions below are designed for users currently running an older version of Guapcoin 2.3 but would like to update to 2.3.0.1
 
 For **Ubuntu**
 ```
@@ -173,5 +175,8 @@ As soon as all 10K transactions are done, we will wait for 15 confirmations. You
 
 - The masternode that you started and that became 'ACTIVE' will after some time(1-2 hrs usually) will go to 'ENABLED'. Once it is 'ENABLED' that masternode will be in the mix to recieve masternode rewards. See the explorer for the current average amount of time it takes for masternodes to receive rewards once they are 'ENABLED' (see the Average Masternode Payment graph at https://guapexplorer.com/#/masternode). 
 
+
+# Section 5.0 Fixes
+Version 2.3.0.1 is designed to resolve Masternode performance and stability issues, primarly memory and availibilty. Included in the update is the creation of a 2gb memory swap and cronjob which auto restarts the guapcoind deamon. Updates also include more active peers from the network.   
 
 
