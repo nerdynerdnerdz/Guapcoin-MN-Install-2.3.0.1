@@ -95,7 +95,7 @@ Once you've created your account and started your VPS instance, make note of the
 
 
 
-## 4.2 Next you need to fund your Masternode controller address on the cold/desktop wallet:
+## 4.1 Next you need to fund your Masternode controller address on the cold/desktop wallet:
 ### Funding your Masternode.
 
 First, we will do the initial collateral transaction (TX) and send exactly 10,000 GUAP to a newly created addresses on the desktop wallet. 
@@ -116,7 +116,7 @@ As soon as all 10K transactions are done, we will wait for 15 confirmations. You
 
 
 
-## 4.3 Installation & Setting up your Masternode Controller on the cold/desktop wallet:
+## 4.2 Installation & Setting up your Masternode Controller on the cold/desktop wallet:
 ### Generate your Masternode Private Key.
 
 - In your wallet, open Settings -> Debug -> Console and run the following command to get your masternode key:
@@ -131,7 +131,7 @@ As soon as all 10K transactions are done, we will wait for 15 confirmations. You
 
 - Copy both the key and output information to a text file. For the output information you will need the 'txhash' and the 'outputidx'. 
 
-### 4.4 Add your Masternode Key and Txid to masternode.conf.
+## 4.3 Add your Masternode Key and Txid to masternode.conf.
 - Close your wallet and open the Guapcoin Appdata folder. Its location depends on your OS.
 
     Windows: Press Windows+R and write %APPDATA%\Guapcoin there. Clock 'OK' to open the folder Guapcoin.
@@ -154,7 +154,7 @@ As soon as all 10K transactions are done, we will wait for 15 confirmations. You
 
 
 
-## 4.5 Install the Masternode server on the hot/VPS wallet:
+## 4.4 Install the Masternode server on the hot/VPS wallet:
 
 - SSH into to your VPS server as root using the public IP of VPS (using Putty on Windows, Terminal.app on macOS, or any other ssh client of your choice). Please note: It’s normal that you don’t see your password after typing or pasting it when logging in through SSH. Run the following commands:
 
