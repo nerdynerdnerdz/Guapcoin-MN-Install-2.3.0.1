@@ -1,8 +1,8 @@
 # Table Of Content:
-Section 1. Description 
-Section 2. Quick Install Guide for GuapCoin v2.3.0.1 MasterNode Setup
-Section 3. Guide for GuapCoin v2.3.0.1 MasterNode Update
-Section 4. How to Setup A MasterNode Guide - Full Tutorial
+## Section 1. Description 
+## Section 2. Quick Install Guide for GuapCoin v2.3.0.1 MasterNode Setup
+## Section 3. Guide for GuapCoin v2.3.0.1 MasterNode Update
+## Section 4. How to Setup A MasterNode Guide - Full Tutorial
 
 # Section 1. Introduction 
 
