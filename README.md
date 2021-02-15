@@ -1,4 +1,4 @@
-# Guide for GuapCoin v2.3.1 MN Setup:
+# Guide for GuapCoin v2.3.0.1 MN Setup:
 
 
 For **Ubuntu**
