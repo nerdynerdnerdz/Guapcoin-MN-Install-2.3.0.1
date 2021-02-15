@@ -6,9 +6,9 @@ guapcoin-cli stop
 systemctl stop guapcoin.service
 sleep 10
 rm -rf /usr/local/bin/guapcoin*
-mkdir GUAP_2.3.1
-cd GUAP_2.3.1
-wget https://github.com/guapcrypto/Guapcoin/releases/download/v2.3.0.1/Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
+mkdir GUAP_2.3.0.1
+cd GUAP_2.3.0.1
+wget https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-2.3.0.1/blob/master/Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
 tar -xzvf Guapcoin-2.3.0.1-Daemon-Ubuntu.tar.gz
 mv guapcoind /usr/local/bin/guapcoind
 mv guapcoin-cli /usr/local/bin/guapcoin-cli
