@@ -24,12 +24,14 @@ NOTE: Note that these instructions are provided AS IS, do not provide for every 
 Now onto the instructions.
 
 # Section 2. Quick Install Guide for GuapCoin v2.3.0.1 MasterNode Setup:
-This is a quick install designed to get your vps or system up and running after running the script below.
+This is a quick install designed to get your vps or system up and running after executing the script below.
 
-For **Ubuntu**
+For **Ubuntu** login to your system and run the following commands
 ```
 wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-2.3.0.1/master/GUAP-v2.3.0.1-MN.sh
+
 sudo chmod +x GUAP-v2.3.0.1-MN.sh
+
 ./GUAP-v2.3.0.1-MN.sh
 ```
 ***
@@ -67,7 +69,9 @@ You will get Masternode Successfully Started
 For **Ubuntu**
 ```
 wget -q https://raw.githubusercontent.com/guapcrypto/Guapcoin-MN-Install-2.3.0.1/master/GUAP-v2.3.0.1-MNUpdate.sh
+
 sudo chmod +x GUAP-v2.3.0.1-MNUpdate.sh
+
 ./GUAP-v2.3.0.1-MNUpdate.sh
 ```
 ***
