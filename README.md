@@ -1,4 +1,4 @@
-# Guide for GuapCoin v2.3.0.1 MN Setup:
+# Guide for GuapCoin v2.3.0.1 MasterNode Setup:
 
 
 For **Ubuntu**
@@ -37,7 +37,7 @@ When Node is Fully Synced enter the command below to check the masternode status
 You will get Masternode Successfully Started
 
 
-# Guide for GuapCoin v2.3.1 MN Update:
+# Guide for GuapCoin v2.3.0.1 MasterNode Update:
 
 For **Ubuntu**
 ```
