@@ -25,18 +25,18 @@ cd ..
 rm -rf ~/.guapcoin/bootstrap.tar.gz ~/GUAP_2.3.0.1
 systemctl start guapcoin.service
 sleep 10
-guapcoin-cli addnode 159.65.221.180 onetry
-guapcoin-cli addnode 45.76.61.148 onetry
+guapcoin-cli addnode 159.65.221.182 onetry
+guapcoin-cli addnode 45.76.255.103 onetry
 guapcoin-cli addnode 209.250.250.121 onetry
-guapcoin-cli addnode 136.244.112.117 onetry
-guapcoin-cli addnode 199.247.20.128 onetry
-guapcoin-cli addnode 78.141.203.208 onetry
+guapcoin-cli addnode 138.197.136.6 onetry
+guapcoin-cli addnode 198.199.68.111 onetry
+guapcoin-cli addnode 178.62.110.207 onetry
 guapcoin-cli addnode 155.138.140.38 onetry
 guapcoin-cli addnode 45.76.199.11 onetry
-guapcoin-cli addnode 45.63.25.141 onetry
-guapcoin-cli addnode 108.61.252.179 onetry
-guapcoin-cli addnode 155.138.219.187 onetry
-guapcoin-cli addnode 66.42.93.170 onetry
+guapcoin-cli addnode 70.35.194.41 onetry
+guapcoin-cli addnode 144.202.75.140 onetry
+guapcoin-cli addnode 209.126.5.122 onetry
+guapcoin-cli addnode 95.216.27.40 onetry
 
 echo "Masternode Updated!"
 echo "Please wait few minutes and start your Masternode again on your Local Wallet"
